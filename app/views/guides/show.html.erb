@@ -1,0 +1,34 @@
+
+<p>
+  <b>Question:</b>
+  <%= @guide.question %>
+</p>
+
+<p>
+  <b>Answer:</b>
+  <%= @guide.answer %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%= @guide.qgroup %>
+</p>
+
+<p>
+  <b>Qtype:</b>
+  <%= @guide.qtype %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @guide.notes %>
+</p>
+
+<p>
+  <b>Score:</b>
+  <%= @guide.score %>
+</p>
+
+
+<%= link_to 'Edit', edit_guide_path(@guide) %> |
+<%= link_to 'Back', guides_path %>

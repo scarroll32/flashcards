@@ -1,0 +1,16 @@
+<% unless @message == 1 %>
+	<%=form_tag("/guides/lanswervalidate",:method=>"post",:remote=>true) do %>
+	  	<p>
+		    <b>Question:</b>
+		    <%= @question.question %>
+	  	</p>
+
+	  	<p>
+	    	<b>Your Answer:</b>
+	    	<%= text_area_tag "your_answer", '', :autofocus=>true %>
+	  	</p>
+	  	<p><%=submit_tag "Submit"%></p>
+	<%- end %>
+<% else %>
+	<p><b>There is nothing to study.</b>Make sure the items you want to study are enabled, or add more items.</p>
+<% end %>

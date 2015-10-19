@@ -1,0 +1,25 @@
+.current:hover{
+	display: block;
+	background-color: white !important;
+	color: black !important;
+}
+.current { 
+	display: block; 
+	width: 14px;
+	height: 14px;
+	margin-top: 1px;
+	line-height: 14px;
+	vertical-align: text-top;
+	background-image: url("images/glyphicons-halflings.png");
+	background-position: 14px 14px;
+	background-repeat: no-repeat;  
+}  
+.asc {   
+  	background-position: -288px -120px;
+  	padding-left: 11px;
+}  
+  
+.desc {   
+  	background-position: -313px -119px;
+  	padding-left: 11px; 	
+}

@@ -1,0 +1,19 @@
+<div id="examination">
+	<p class=""> Your answer is wrong. </p>
+  	<p>
+    	<b>Question:</b>
+    	<%= @question.question %>
+  	</p>
+
+  	<p>
+    	<b> Answer:</b>
+    	<%= @question.answer %>
+  	</p>
+  	<p>
+  		<b> Your Answer:</b>
+  		<%= params[:your_answer]%>
+  	</p>
+  	<p><%=link_to "Skip",guides_skip_path,:remote=>true,:class=>"btn"%></p>
+  	<p>Is this right?</p>
+  	<p><%=link_to "Yes",guides_answerrightyes_path,:remote=>true, :class=>"btn"%> | <%=link_to "No",guides_answerrightno_path,:remote=>true, :class=>"btn"%></p>
+</div>

@@ -1,0 +1,10 @@
+<p>
+<b>Question:</b>
+<%= @question.question %>
+</p>
+
+<p>
+<b>Answer:</b>
+<%= @question.answer %>
+</p>
+<p><b>Remember this item</b> <%=link_to "Ok",guides_learningnext_path,:remote=>true,:class=>"btn"%></p>

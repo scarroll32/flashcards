@@ -1,0 +1,54 @@
+== Genius
+
+1. When user opens application, it calls “<tt>index</tt>” method and displays all the questions.
+
+== 2. Questions Entry :
+
+i) When user clicks “New Question”, it calls “<tt>new</tt>” method.
+
+ii)  Now, user has to enter Question details and clicks “ Create Guide ” button. Then, application calls “<tt>create</tt>” method and saves data into database.
+
+iii) When user clicks “Show” link, it calls “<tt>show</tt>” method.
+
+iv)  When user clicks “Edit” link, it calls “<tt>edit</tt>” method. Now the user has to update the  values of question. Then clicks, “ Update Guide ” button, then applications calls “<tt>update</tt>” method and updates the question data into database.
+
+v) When user clicks “destroy” link, its calls “<tt>destroy</tt>” method and deletes the specific question from database.
+
+== 3.   Learning Process :
+
+i) When user selects required questions, clicks “Learn” button, it calls “<tt>selectquestions</tt>” method and gets the 2 random questions and keeps into a pair,then redirects to “<tt>learning</tt>” method and displays question to the user.
+
+ii) After reading the question, user clicks “Ok” button. Then, it calls “<tt>learningnext</tt>” method and displays next question.
+
+iii) When the user finishes learning of 2 paired questions, it goes to review process with the learned 2 question. Now, it calls “<tt>learningexam</tt>” method.
+
+iv) Here user answers the question and clicks “submit” button. Now, the application calls “<tt>lanswervalidate</tt>” method.
+
+v) If the given answer is right, it gets the next random question from the selected questions for learning, calls again “<tt>learning</tt>” method.
+
+vi) If the answer is wrong, applications displays “Your answer is wrong” message with three buttons. They are “skip”, “yes”, “no”.
+
+vii) When the user clicks “yes” button, it calls “<tt>lanswerrightyes</tt>” method and increases the score by 1.
+
+viii)  When user clicks “no” button, it calls “<tt>lanswerrightno</tt>” method and decreases the score to zero.
+
+ix) When user clicks “skip” button, it calls “<tt>lskip</tt>” method and decrases the score to zero and marks the question as non-learned.
+
+== 4.   Review Process : 
+
+i) When the user selects required questions, clicks “Review” button, it calls “<tt>selectquestion</tt>” method. Here, applications takes 2 randomly selected questions from the learned questions and goes to review process.
+
+ii) Here, the applications calls “<tt>examination</tt>” method and asks the user to answer the question.
+
+iii) After enters answer, user clicks the “submit” button, now the application calls “<tt>answervalidate</tt>” method. If the user answered correctly, he will gets next question and calls “<tt>examination</tt>” method again.
+
+iv) If the answer is wrong, applications displays “Your answer is wrong” message with three buttons. They are “skip”, “yes”, “no”.
+
+v) When the user clicks “yes” button, it calls “<tt>answerrightyes</tt>” method and increases the score by 1.
+
+vi) When user clicks “no” button, it calls “<tt>answerrightno</tt>” method and decreases the score to zero.
+
+vii) When user clicks “skip” button, it calls “<tt>skip</tt>” method and decrases the score to zero and marks the question as non-learned.
+
+
+5.When the user clicks “Reset” button, it calls “<tt>resetquestions</tt>” method and deletes all the question.

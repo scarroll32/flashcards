@@ -1,0 +1,29 @@
+<%=form_tag("guides/selectquestions", :method=>"post") do %>
+  <%= link_to 'New Question', new_guide_path, :class=>"btn" %>
+  <%= submit_tag 'Learn', :name=> "learn", :class=>"btn" %>
+  <%= submit_tag 'Review', :name=> "review", :class=>"btn" %>
+  <%= link_to 'Reset', guides_resetquestions_path , method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn" %>
+  <h1>Listing Questions</h1>
+  <table class="table table-bordered table-hover table-striped pretty">
+    <tr>
+      <th></th>
+      <th><%= sortable "question" %></th>  
+      <th><%= sortable "answer" %></th>  
+      <th><%= sortable "qgroup" %></th>  
+      <th><%= sortable "qtype" %></th>  
+      <th><%= sortable "score" %></th>
+      <th></th>
+    </tr>
+    <% @guides.each do |guide| %>
+      <tr>
+        <td><%= check_box_tag "qselect[]", guide.id, true %></td>
+        <td><%= guide.question %></td>
+        <td><%= guide.answer %></td>
+        <td><%= guide.qgroup %></td>
+        <td><%= guide.qtype %></td>
+        <td><%= guide.score %></td>
+        <td><%= link_to 'Show', guide %> | <%= link_to 'Edit', edit_guide_path(guide) %> | <%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
